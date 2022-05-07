@@ -56,9 +56,8 @@ ip:9006  //默认端口号
 ./webbench-1.5/webbench -c 8000 -t 5 http://ip:port/
 ```
 默认listenfd和connfd都处于LT模式
-[![测试结果]
 
-(https://s1.ax1x.com/2022/05/07/OlDMgf.png)](https://imgtu.com/i/OlDMgf)
+[![测试结果](https://s1.ax1x.com/2022/05/07/OlDMgf.png)](https://imgtu.com/i/OlDMgf)
 ## 致谢
 Linux高性能服务器编程，游双著.
 [@qinguoyi](https://github.com/qinguoyi/TinyWebServer)
