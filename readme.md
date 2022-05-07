@@ -25,39 +25,40 @@
 ## 服务器启动
 * 安装MySQL数据库
 ```mysql
-    // 建立目标库
-    create database yourdb;
-    // 创建user表
-    USE yourdb;
-    CREATE TABLE user
-    (
-        username char(50) NULL,
-        passwd char(50) NULL
-    )ENGINE=InnoDB;
+// 建立目标库
+create database yourdb;
+// 创建user表
+USE yourdb;
+CREATE TABLE user
+(
+    username char(50) NULL,
+    passwd char(50) NULL
+)ENGINE=InnoDB;
 ```
 * 修改Webserver.cpp中数据库初始化信息
 ```cpp
-    m_user = "root";             //登录数据库用户名
-    m_passWord = "1";            //登录数据库密码
-    m_databaseName = "yourdb";   //数据库名
+m_user = "root";             //登录数据库用户名
+m_passWord = "1";            //登录数据库密码
+m_databaseName = "yourdb";   //数据库名
 ```
 * 编译及启动
-```shell
-    make
-
-    ./server
+```
+ make
+ ./server
 ```
 * 浏览器端
 ```
-    ip:9006  //默认端口号
+ip:9006  //默认端口号
 ```
 ## 压力测试
 **测试环境**：Ubuntu 18  内存4G  处理器4核
 ```
-    ./webbench-1.5/webbench -c 8000 -t 5 http://ip:port/
+./webbench-1.5/webbench -c 8000 -t 5 http://ip:port/
 ```
 默认listenfd和connfd都处于LT模式
-[![测试结果](https://s1.ax1x.com/2022/05/07/OlDMgf.png)](https://imgtu.com/i/OlDMgf)
+[![测试结果]
+
+(https://s1.ax1x.com/2022/05/07/OlDMgf.png)](https://imgtu.com/i/OlDMgf)
 ## 致谢
 Linux高性能服务器编程，游双著.
 [@qinguoyi](https://github.com/qinguoyi/TinyWebServer)
